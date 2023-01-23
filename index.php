@@ -24,22 +24,22 @@ if(isset($_POST["Temperature"], $_POST["CurrentScale"], $_POST["NewScale"])){
 
     if($cScale == "fahrenheit" && $nScale == "celcius") {
         $nTemp = round(($cTemp - 32) * 5 / 9, 2);
-        echo "you new temp is $nTemp.";
+        echo "$cTemp&deg in $cScale is $nTemp&deg in $nScale.";
     }elseif($cScale == "fahrenheit" && $nScale == "kelvin") {
         $nTemp = round(($cTemp - 32) * 5 / 9 + 273.15, 2);
-        echo "you new temp is $nTemp.";
+        echo "$cTemp&deg in $cScale is $nTemp&deg in $nScale.";
     }elseif($cScale == "celcius" && $nScale == "fahrenheit") {
         $nTemp = round(($cTemp * 9 / 5) + 32, 2);
-        echo "you new temp is $nTemp.";
+        echo "$cTemp&deg in $cScale is $nTemp&deg in $nScale.";
     }elseif($cScale == "celcius" && $nScale == "kelvin") {
         $nTemp = round($cTemp + 273.15, 2);
-        echo "you new temp is $nTemp.";
+        echo "$cTemp&deg in $cScale is $nTemp&deg in $nScale.";
     }elseif($cScale == "kelvin" && $nScale == "fahrenheit") {
         $nTemp = round(($cTemp - 273.15) * 9 / 5 + 32, 2);
-        echo "you new temp is $nTemp.";
+        echo "$cTemp&deg in $cScale is $nTemp&deg in $nScale.";
     }elseif($cScale == "kelvin" && $nScale == "celcius") {
         $nTemp = round($cTemp - 273.15, 2);
-        echo "you new temp is $nTemp.";
+        echo "$cTemp&deg in $cScale is $nTemp&deg in $nScale.";
     } elseif(empty($_POST["Temperature"] && $_POST["CurrentScale"] && $_POST["NewScale"])) {
         echo "Please fill out all of the fields.";
     }elseif($cScale == $nScale) {
